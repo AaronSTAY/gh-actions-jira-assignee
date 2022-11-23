@@ -1,14 +1,24 @@
 name: 'Update JIRA Assignee'
 description: 'Updates the assignee of a JIRA ticket. '
 inputs:
-  issueKey:  # id of input
-    description: 'Ex. SVS-1221'
+  domain:
+    description: 'Domain name of the Jira cloud instance (e.g. your-domain.atlassian.net)'
     required: true
-    default: ''
-  assigneeName:
-    description: 'Aaron Taylor'
+  username:
+    description: 'Jira Username'
     required: true
-    default: ''
+  password:
+    description: 'Jira Personal Access Token'
+    required: true
+  jql:
+    description: 'The JQL query to identify the issues to update'
+    required: true
+  fieldName:
+    description: 'The name of the field to update (careful with custom fields)'
+    required: true
+  fieldValue:
+    description: 'The value to set the field to'
+    required: true
 outputs:
   status: # id of output
     description: 'success'
