@@ -1,0 +1,17 @@
+name: 'Update JIRA Assignee'
+description: 'Updates the assignee of a JIRA ticket. '
+inputs:
+  issueKey:  # id of input
+    description: 'Ex. SVS-1221'
+    required: true
+    default: ''
+  assigneeName:
+    description: 'Aaron Taylor'
+    required: true
+    default: ''
+outputs:
+  status: # id of output
+    description: 'success'
+runs:
+  using: 'node16'
+  main: 'index.js'
