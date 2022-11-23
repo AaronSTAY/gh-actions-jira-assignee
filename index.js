@@ -1,5 +1,4 @@
 const core = require('@actions/core');
-const github = require('@actions/github');
 const JiraApi = require("jira-client")
 
 let jira, domain, username, password, jql, fieldName, fieldValue;
